@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-static	int check_overflow(size_t n, int signe)
+static	int	check_overflow(size_t n, int signe)
 {
 	if (n >= 9223372036854775807 && signe == 1)
 		return (-1);

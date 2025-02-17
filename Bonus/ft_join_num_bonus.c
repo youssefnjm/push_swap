@@ -59,7 +59,7 @@ static	size_t	ft_strlen(const char *str)
 	return (i);
 }
 
-static	char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	int		i;
 	int		j;

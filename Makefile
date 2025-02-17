@@ -16,7 +16,7 @@ NAME_BONUS=checker
 
 CC=cc
 
-CFLAGS=-Wall -Wextra -Werror
+CFLAGS=-Wall -Wextra -Werror -g
 
 SRC_BNS= ./Bonus/push_swap_bonus.c \
 			./Bonus/ft_atoi_bonus.c \
@@ -51,10 +51,10 @@ OBJ=$(SRC:.c=.o)
 
 OBJ_BNS=$(SRC_BNS:.c=.o)
 
-./Mandatory/%.o : ./Mandatory/%.c ./Mandatory/push_swap.h 
+./Mandatory/%.o : ./Mandatory/%.c ./Mandatory/push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-./Bonus/%.o : ./Bonus/%.c ./Bonus/push_swap_bonus.h 
+./Bonus/%.o : ./Bonus/%.c ./Bonus/push_swap_bonus.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)

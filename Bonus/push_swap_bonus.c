@@ -14,9 +14,10 @@
 
 void	set_index(t_stack *stack_a)
 {
-	t_stack *current;
-	int i = 0;
+	t_stack	*current;
+	int		i;
 
+	i = 0;
 	current = stack_a;
 	while (current != NULL)
 	{
@@ -60,19 +61,13 @@ void	build_stack(t_stack **stack, char **str_numbers)
 	free_2d_array(str_numbers);
 }
 
-#include <string.h>
-
-void gg(void){
-	system("leaks checker");
-}
-
 int	main(int ac, char **av)
 {
 	char	**str_numbers;
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	int		stack_len;
-	// atexit(gg);
+
 	stack_a = NULL;
 	stack_b = NULL;
 	if (ac == 1)
@@ -93,20 +88,3 @@ int	main(int ac, char **av)
 	free_lst(&stack_a);
 	return (0);
 }
-
-
-		// t_stack *current = stack_a;
-		// puts("a");
-		// while (current != NULL)
-		// {
-		// 	printf("%d ", current->value);
-		// 	current = current->next;
-		// }
-		// // puts("\nb");
-		// // current = stack_b;
-		// // while (current != NULL)
-		// // {
-		// // 	printf("%d ", current->value);
-		// // 	current = current->next;
-		// // }
-		// // puts("");

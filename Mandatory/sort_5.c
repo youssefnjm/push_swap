@@ -26,7 +26,7 @@ int	get_min_stack(t_stack *stack_a)
 	return (0);
 }
 
-void	sort_5_moves(t_stack **stack_a, t_stack **stack_b, int *len, int far) 
+void	sort_5_moves(t_stack **stack_a, t_stack **stack_b, int *len, int far)
 
 {
 	while ((*len) != 3)

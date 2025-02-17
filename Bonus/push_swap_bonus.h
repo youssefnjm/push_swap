@@ -13,8 +13,6 @@
 #ifndef PUSH_SWAP_BONUS_H
 # define PUSH_SWAP_BONUS_H
 
-# include <stdio.h>
-
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -34,6 +32,7 @@ int		check_int_range(const char *str);
 
 int		check_argements(char **str_numbers, int *stack_len);
 
+void	free_and_exit(t_stack **stack_a, t_stack **stack_b, int flag);
 void	free_2d_array(char **ptr);
 void	free_lst(t_stack **stack);
 
@@ -57,7 +56,7 @@ void	ss(t_stack **stack_a, t_stack **stack_b);
 void	rr(t_stack **stack_a, t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 
-void handle_moves(t_stack **stack_a, t_stack **stack_b);
+void	handle_moves(t_stack **stack_a, t_stack **stack_b);
 
 int		ft_strlenn(char	*str);
 int		check_new_line(char	*str);
@@ -66,5 +65,6 @@ char	*ft_strjoinn(char *s1, char *s2);
 void	ft_strcpy(char	*dest, char	*src);
 char	*get_next_line(int fd);
 
+char	*ft_strjoin(char *s1, char *s2);
 
 #endif

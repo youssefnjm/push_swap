@@ -12,32 +12,6 @@
 
 #include "push_swap_bonus.h"
 
-static	char	*reset_ptr(char *ptr)
-{
-	char	*tmp;
-	int		i;
-	int		j;
-
-	i = 0;
-	j = 0;
-	tmp = NULL;
-	while (ptr[i] != '\0' && ptr[i] != '\n')
-		i++;
-	if (ptr[i] == '\0')
-		return (free(ptr), NULL);
-	i++;
-	if (ptr[i] == '\0')
-        return (free(ptr), NULL);
-	while (ptr[i + j] != '\0')
-		j++;
-	tmp = malloc(sizeof(char) * (j + 1));
-	if (!tmp)
-		return (free(ptr), NULL);
-	ft_strcpy(tmp, &ptr[i]);
-	free(ptr);
-	return (tmp);
-}
-
 static	char	*get_line(char *str)
 {
 	int		i;
@@ -117,6 +91,7 @@ char	*get_next_line(int fd)
 		ptr = NULL;
 		return (NULL);
 	}
-	ptr = reset_ptr(ptr);
+	free(ptr);
+	ptr = NULL;
 	return (line);
 }

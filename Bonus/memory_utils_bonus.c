@@ -35,3 +35,16 @@ void	free_lst(t_stack **stack)
 		free(tmp);
 	}
 }
+
+void	free_and_exit(t_stack **stack_a, t_stack **stack_b, int flag)
+{
+	if (stack_a && *stack_a)
+		free_lst(stack_a);
+	if (stack_b && *stack_b)
+		free_lst(stack_b);
+	if (flag == 1)
+		write(2, "Error\n", 6);
+	else
+		write(1, "KO\n", 3);
+	exit(1);
+}
