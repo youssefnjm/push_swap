@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-#include <stdio.h>
 
 static	int	ft_strcmp(const char *s1, const char *s2)
 {
